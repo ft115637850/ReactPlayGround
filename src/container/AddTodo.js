@@ -1,6 +1,8 @@
 import { connect } from 'react-redux';
 import React from 'react';
-let nextTodoId = 0;
+import {v4} from 'node-uuid';
+
+console.log(v4);
 let AddTodo = ({dispatch}) => (
     <div>
         <input ref={node => {
@@ -10,7 +12,7 @@ let AddTodo = ({dispatch}) => (
             dispatch({
                 type: 'ADD_TODO',
                 text: this.input.value,
-                id: nextTodoId++
+                id: v4()
             });
             this.input.value = '';
             }}>
