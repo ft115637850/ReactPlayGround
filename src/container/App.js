@@ -1,7 +1,8 @@
 import React, { Component } from 'react'; 
 import AddTodo from './AddTodo';
 import VisibleTodoList from './VisibleTodoList';
-import Footer from './Footer'
+import Footer from './Footer';
+import JsonP from './JsonP';
 
 class App extends Component {
   render() {
@@ -10,6 +11,7 @@ class App extends Component {
         <AddTodo />
         <VisibleTodoList /> 
         <Footer/>
+        <JsonP/>
       </div>
     );
   }
